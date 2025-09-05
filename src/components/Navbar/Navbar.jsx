@@ -4,6 +4,7 @@ import logo from '../../assets/logo.png'
 import arrow_icon from '../../assets/arrow_icon.png'
 import { CoinContext } from '../../context/CoinContext'
 import { Link } from 'react-router-dom';
+import SignUp from "../SignUp/SignUp"
 
 const Navbar = () => {
 
@@ -30,6 +31,8 @@ const Navbar = () => {
     }
   }
 
+
+
   return (
     <div className='navbar'>
       <Link  to={'/'}> 
@@ -47,7 +50,9 @@ const Navbar = () => {
                 <option value="euro">EUR</option>
                 <option value="inr">INR</option>
             </select>
+            <Link to={'/SignUp'}>
             <button>Sign up <img src={arrow_icon} alt=''></img></button>
+            </Link>
         </div>
     </div>
   )
