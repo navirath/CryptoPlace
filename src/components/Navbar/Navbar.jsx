@@ -11,6 +11,8 @@ const Navbar = () => {
   const { setCurrency } = useContext(CoinContext);
 
   const currencyHandler = (event) => {
+
+
     switch (event.target.value){
       case "usd": {
         setCurrency({name: "usd", symbol: "$"});
@@ -45,7 +47,7 @@ const Navbar = () => {
             <li>Blog</li>
         </ul>
         <div className="nav-right">
-            <select onChange={currencyHandler}>
+            <select onChange={currencyHandler} defaultValue="usd">
                 <option value="usd">USD</option>
                 <option value="euro">EUR</option>
                 <option value="inr">INR</option>
